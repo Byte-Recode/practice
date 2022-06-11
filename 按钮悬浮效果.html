@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>按钮悬浮效果</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			body{
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: linear-gradient(200deg, #e8ff9c, #ffbd9b);
+			}
+			
+			div{
+				perspective: 320px;
+			}
+			
+			.btn{
+				display: block;
+				margin: 40px;
+				width: 240px;
+				height: 80px;
+				border: none;
+				background-color: #ffbd9b;
+				color: aliceblue;
+				font-size: 18px;
+				border-radius: 10px;
+				outline: none;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+			
+			.btn:nth-child(1):hover{
+				transform: rotateX(-15deg);
+				box-shadow: 0 15px 15px rgba(255, 95, 65, .5);
+			}
+			.btn:nth-child(2):hover{
+				transform: rotateX(15deg);
+				box-shadow: 0 15px 15px rgba(255, 95, 65, .5);
+			}
+			.btn:nth-child(3):hover{
+				transform: rotateY(-15deg);
+				box-shadow: 0 15px 15px rgba(255, 95, 65, .5);
+			}
+			.btn:nth-child(4):hover{
+				transform: rotateY(15deg);
+				box-shadow: 0 15px 15px rgba(255, 95, 65, .5);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<button class="btn">HOME</button>
+			<button class="btn">ABOUT</button>
+			<button class="btn">TEAM</button>
+			<button class="btn">CONTACT</button>
+		</div>
+	</body>
+</html>

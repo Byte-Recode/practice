@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>input输入框动画</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				outline: none;
+				box-sizing: border-box;
+			}
+			
+			body{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				background: linear-gradient(200deg, #f5acf4, #e9d9ff);
+			}
+			
+			.wrapper{
+				width: 450px;
+				background-color: #FFFFFF;
+				padding: 40px;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+			}
+			
+			.wrapper .input-data{
+				position: relative;
+				width: 100%;
+				height: 40px;
+			}
+			
+			.wrapper .input-data input{
+				width: 100%;
+				height: 100%;
+				font-size: 17px;
+				border: none;
+				border-bottom: 2px solid #c0c0c0;
+			}
+			
+			.wrapper .input-data input:focus ~ label,
+			.wrapper .input-data input:valid ~ label{
+				transform: translateY(-25px);
+				font-size: 15px;
+				color: #efafde;
+			}
+			
+			.wrapper .input-data label{
+				position: absolute;
+				border: 10px;
+				left: 0;
+				color: #808080;
+				pointer-events: none;
+				transition: all 0.3s ease;
+			}
+			
+			.wrapper .input-data .underline{
+				position: absolute;
+				bottom: 0px;
+				height: 2px;
+				width: 100%;
+				background-color: #EFAFDE;
+				transform: scaleX(0);
+				transition: all 0.3s ease;
+			}
+			
+			.wrapper .input-data input:focus ~ .underline,
+			.wrapper .input-data input:valid ~ .underline{
+				transform: scaleX(1);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="input-data">
+				<input type="text" required>
+				<div class="underline"></div>
+				<label>search...</label>
+			</div>
+		</div>
+	</body>
+</html>

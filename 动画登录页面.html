@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html,
+			body{
+				height: 100%;
+			}
+			body{
+				overflow-x: hidden;
+			}
+			section{
+				position: relative;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #3b3b3b;
+				overflow: hidden;
+			}
+			section::before{
+				position: absolute;
+				content: "";
+				z-index: 2;
+				width: 450px;
+				height: 450px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-100%, -80%);
+				background-color: #045da1;
+				border-radius: 50%;
+				box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+				animation: pulse 1.5s infinite;
+			}
+			section::after{
+				position: absolute;
+				content: "";
+				z-index: 2;
+				width: 300px;
+				height: 300px;
+				top: 50%;
+				left: 50%;
+				transform: translate(10%, 20%);
+				background-color: #97549a;
+				border-radius: 50%;
+				box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+				animation: pulse 1.6s infinite;
+			}
+			@keyframes pulse{
+				50%{box-shadow: 0 0 0 50px rgba(255,255,255,0);}
+				100%{box-shadow: 0 0 0 50px rgba(255,255,255,0);}
+			}
+			form{
+				position: relative;
+				z-index: 3;
+				width: 320px;
+				background-color: rgba(255, 255, 255, .1);
+				padding: 40px 30px;
+				border-radius: 8px;
+				box-shadow: 0 20px 40px rgba(0, 0, 0, .1);
+				border-right: 1px solid rgba(255, 255, 255, .2);
+				border-bottom: 1px solid rgba(255, 255, 255, .2);
+				backdrop-filter: blur(20px);
+			}
+			form p{
+				color: #ffffff;
+				display: block;
+				text-align: center;
+				margin: 0 0 30px 0;
+			}
+			input{
+				width: 100%;
+				height: 50px;
+				border-radius: 8px;
+				background-color: transparent;
+				border: 1px solid rgba(255, 255, 255,.5);
+				margin-bottom: 15px;
+				padding-left: 15px;
+				color: #ffffff;
+				outline: none;
+			}
+			input::placeholder{
+				color: #ffffff;
+			}
+			button{
+				width: 100%;
+				height: 50px;
+				border: 0;
+				background: linear-gradient(to right, #02aab0 0%, #00cdac 51%, #02aab0 100%);
+				background-size: 200% auto;
+				border-radius: 8px;
+				color: #ffffff;
+				outline: none;
+				cursor: pointer;
+				box-shadow: 0 20xp 40px rbga(0, 0, 0, .1) ;
+			}
+			button:hover{
+				background-position: right center;
+				color: #ffffff;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<form action="">
+				<p>welcome to login</p>
+				<input type="text" placeholder="username">
+				<input type="password" placeholder="password">
+				<button type="submit">Login</button>
+			</form>
+		</section>
+	</body>
+</html>

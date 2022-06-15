@@ -1,0 +1,30 @@
+{
+  "id": "3465195",
+  "name": "Responsive design",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11372704",
+      "name": "数据",
+      "font_class": "shuju",
+      "unicode": "e8ba",
+      "unicode_decimal": 59578
+    },
+    {
+      "icon_id": "11372639",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e8b0",
+      "unicode_decimal": 59568
+    },
+    {
+      "icon_id": "145431",
+      "name": "群组",
+      "font_class": "qunzu",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    }
+  ]
+}
